@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Engineer Portfolio | Rishi Narayan</title>
+    <!-- Fonts from V1 -->
+    <link rel="preconnect" href="fonts.googleapis.com/" />
+    <link rel="preconnect" href="fonts.gstatic.com/" crossorigin="" />
+    <link href="fonts.googleapis.com/css2" rel="stylesheet" />
+    <link rel="stylesheet" href="Rishiportfolio-orpin.vercel.app/style.css" />
+</head>
+
+<body class="loading">
+    <!-- ═══ PRELOADER ═══ -->
+    <div id="preloader">
+        <div class="preloader-corner tl"></div>
+        <div class="preloader-corner tr"></div>
+        <div class="preloader-corner bl"></div>
+        <div class="preloader-corner br"></div>
+        <div class="preloader-content">
+            <div class="preloader-initials">RN</div>
+            <div class="preloader-line"></div>
+            <div class="preloader-name">Rishi Narayan</div>
+            <div class="preloader-percent">0%</div>
+            <div class="preloader-bar-track">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="coordinate-tooltip">x: 1075, y: 204</div>
+
+    <div class="background-grid"></div>
+
+    <nav class="top-nav">
+        <div class="nav-brand">RISHI NARAYAN</div>
+        <div class="nav-links">
+            <a href="#about">01. OBSERVATION</a>
+            <a href="#projects">02. ANALYSIS</a>
+            <a href="#education">03. ARCHIVE</a>
+            <a href="#contact">04. CONCLUSION</a>
+            <a href="#" id="achievements-nav-link" onclick="toggleAchievements(event)">🏆 ACHIEVEMENTS</a>
+        </div>
+        <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()">
+        <div class="mobile-nav-menu">
+            <a href="#about" onclick="toggleMobileNav()">01. OBSERVATION</a>
+            <a href="#projects" onclick="toggleMobileNav()">02. ANALYSIS</a>
+            <a href="#education" onclick="toggleMobileNav()">03. ARCHIVE</a>
+            <a href="#contact" onclick="toggleMobileNav()">04. CONCLUSION</a>
+            <a href="#" onclick="toggleAchievements(event); toggleMobileNav()">🏆 ACHIEVEMENTS</a>
+        </div>
+    </div>
+
+    <div class="dead-space" style="height: 10vh;"></div>
+
+    <main class="document">
+        <!-- V1 Hero Layout -->
+        <header class="hero" id="about">
+            <div class="hero-content">
+                <p class="mono-label">ANDHRA PRADESH, INDIA | SOFTWARE ENGINEER</p>
+                <h1 class="dramatic-title">Rishi Narayan. <br /> Building the Web, One Line of Code at a Time.
+                </h1>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value" data-target="6.57" data-suffix="" data-prefix="">6.57</span>
+                        <span class="stat-label">BTech CSE (CGPA)</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value" data-target="89" data-suffix="%" data-prefix="">89%</span>
+                        <span class="stat-label">INTERMEDIATE (XII)</span>
+                    </div>
+                </div>
+
+                <div class="abstract-text">
+                    <p><strong>Abstract:</strong> I am a Software Engineer proficient in C++, JavaScript, React JS, and Node.js. My focus
+                        is on Full-Stack Web Development, building responsive UIs, and engineering scalable backend systems.
+                        I turn ideas into interactive, user-centric web applications.</p>
+                </div>
+                <br />
+                <div class="mono-label" style="display:flex; gap: 15px; flex-wrap: wrap; align-items: center;">
+                    <a href="mailto:rn9092167@gmail.com" class="view-link">rn9092167@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/rishi-narayan17/" class="view-link" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">GitHub</a>
+                    <a href="Rishi cv.docx" class="resume-btn" download="">[ ↓ DOWNLOAD RESUME ]</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-wrapper">
+                <img src="my profile.jpeg" alt="Rishi Narayan" class="hero-image" />
+            </div>
+        </header>
+    </main>
+
+    <div class="dead-space" style="height: 20vh;"></div>
+
+    <main class="document">
+        <section class="section-divider">
+            <div class="line"></div>
+            <div class="section-label">FIG 1. ORIGIN STORY</div>
+            <div class="line"></div>
+        </section>
+        <h2 class="dramatic-title" style="text-align: center; margin-bottom: 0;">How I fell in love with Fullstack Development.</h2>
+    </main>
+
+    <div class="dead-space" style="height: 10vh;"></div>
+
+    <!-- 3D Cinematic Timeline -->
+    <div class="map-section-wrapper" id="map-trigger">
+        <div class="sticky-map">
+            <div class="map-canvas" id="map-canvas">
+                <div class="geo-grid"></div>
+            </div>
+            <!-- 4 Basketballs — one fires per hoop -->
+            <div class="basketball" id="ball-0"></div>
+            <div class="basketball" id="ball-1"></div>
+            <div class="basketball" id="ball-2"></div>
+            <div class="basketball" id="ball-3"></div>
+
+            <!-- Stop-motion jumpshot figure -->
+            <div class="jumpshot-figure" id="jumpshot">
+                <img class="jump-frame active" src="Rishiportfolio-orpin.vercel.app/jumpshotpt1-removebg-preview.png" alt="Jump 1" data-frame="0" />
+                <img class="jump-frame" src="Rishiportfolio-orpin.vercel.app/jumpshotpt2-removebg-preview.png" alt="Jump 2" data-frame="1" />
+                <img class="jump-frame" src="Rishiportfolio-orpin.vercel.app/jumpshotpt3-removebg-preview.png" alt="Jump 3" data-frame="2" />
+                <img class="jump-frame" src="Rishiportfolio-orpin.vercel.app/jumpshotpt4-removebg-preview.png" alt="Jump 4" data-frame="3" />
+            </div>
+
+            <div class="timeline-3d-container">
+
+                <!-- Hoop 1 -->
+                <div class="backboard-wrap left" data-threshold="0.10" data-ball="0">
+                    <div class="backboard">
+                        <div class="backboard-inner">
+                            <p class="mono-label">THE FOUNDATION // 2025</p>
+                            <h3>Exclence – Smart Agriculture</h3>
+                            <p>My first full-stack project. Built with HTML and CSS for Frameworl, Learned PHP for backend development. Done by the whole team.</p>
+                        </div>
+                    </div>
+                    <div class="hoop-pole"></div>
+                    <div class="hoop-assembly">
+                        <div class="hoop-ring"></div>
+                        <svg class="hoop-net" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="0" x2="5" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="23" y1="0" x2="20" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="36" y1="0" x2="35" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="49" y1="0" x2="50" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="62" y1="0" x2="60" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="70" y1="0" x2="75" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="10" y1="12" x2="70" y2="12" stroke="#888" stroke-width="1" opacity="0.4"/>
+                            <line x1="8" y1="26" x2="72" y2="26" stroke="#888" stroke-width="1" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Hoop 2 -->
+                <div class="backboard-wrap left" data-threshold="0.35" data-ball="1">
+                    <div class="backboard">
+                        <div class="backboard-inner">
+                            <p class="mono-label">THE FRAMEWORK // 2025</p>
+                            <h3>Edu-Retain – Education Platform</h3>
+                            <p>Levelled up to React and Express. Built a responsive education platform using React Context API, Tailwind CSS 4, and Framer Motion. Mastered component-driven architecture and smooth frontend animations.</p>
+                        </div>
+                    </div>
+                    <div class="hoop-pole"></div>
+                    <div class="hoop-assembly">
+                        <div class="hoop-ring"></div>
+                        <svg class="hoop-net" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="0" x2="5" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="23" y1="0" x2="20" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="36" y1="0" x2="35" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="49" y1="0" x2="50" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="62" y1="0" x2="60" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="70" y1="0" x2="75" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="10" y1="12" x2="70" y2="12" stroke="#888" stroke-width="1" opacity="0.4"/>
+                            <line x1="8" y1="26" x2="72" y2="26" stroke="#888" stroke-width="1" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Hoop 3 -->
+                <div class="backboard-wrap left" data-threshold="0.60" data-ball="2">
+                    <div class="backboard">
+                        <div class="backboard-inner">
+                            <p class="mono-label">THE LAUNCH // 2026</p>
+                            <h3>Ecentra-2k26 – Symposium</h3>
+                            <p>Engineered a mobile-first landing page with interactive modules for a live symposium. Sharpened responsive design skills and delivered a seamless cross-device experience under a tight deadline.</p>
+                        </div>
+                    </div>
+                    <div class="hoop-pole"></div>
+                    <div class="hoop-assembly">
+                        <div class="hoop-ring"></div>
+                        <svg class="hoop-net" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="0" x2="5" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="23" y1="0" x2="20" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="36" y1="0" x2="35" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="49" y1="0" x2="50" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="62" y1="0" x2="60" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="70" y1="0" x2="75" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="10" y1="12" x2="70" y2="12" stroke="#888" stroke-width="1" opacity="0.4"/>
+                            <line x1="8" y1="26" x2="72" y2="26" stroke="#888" stroke-width="1" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Hoop 4 -->
+                <div class="backboard-wrap left" data-threshold="0.85" data-ball="3">
+                    <div class="backboard">
+                        <div class="backboard-inner">
+                            <p class="mono-label">THE SYSTEM // 2026</p>
+                            <h3>Blinkit Clone – Full Stack</h3>
+                            <p>Built a complete quick-commerce platform with Django REST API and Next.js. Engineered real-time order tracking, role-based dashboards, and automated item-sharing across Manager and Delivery Rider workflows.</p>
+                        </div>
+                    </div>
+                    <div class="hoop-pole"></div>
+                    <div class="hoop-assembly">
+                        <div class="hoop-ring"></div>
+                        <svg class="hoop-net" viewBox="0 0 80 40" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="0" x2="5" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="23" y1="0" x2="20" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="36" y1="0" x2="35" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="49" y1="0" x2="50" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="62" y1="0" x2="60" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="70" y1="0" x2="75" y2="40" stroke="#888" stroke-width="1.2" opacity="0.6"/>
+                            <line x1="10" y1="12" x2="70" y2="12" stroke="#888" stroke-width="1" opacity="0.4"/>
+                            <line x1="8" y1="26" x2="72" y2="26" stroke="#888" stroke-width="1" opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Long height to force scrolling -->
+        <div class="scroll-track"></div>
+    </div>
+
+    <div class="dead-space" style="height: 30vh;"></div>
+
+    <main class="document">
+        <section class="section-divider">
+            <div class="line"></div>
+            <div class="section-label">FIG 2. EMPIRICAL EVIDENCE (Projects)</div>
+            <div class="line"></div>
+        </section>
+
+        <!-- V1 Projects with dramatic styling -->
+        <section class="projects" id="projects">
+            <div class="project-card" data-reveal-delay="0">
+                <div class="project-image-wrap">
+                    <img src="Projects Images/BlinkIt.jpeg" alt="Blinkit Clone Project" class="project-img" />
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Blinkit Clone – Quick Commerce</h2>
+                    <p class="mono-label">FEB 2026 | DJANGO &amp; NEXT.JS</p>
+                    <p class="project-desc">Built a full-stack quick-commerce platform replicating Blinkit's
+                        core functionality. Engineered real-time order tracking for customers,
+                        automated item-sharing workflows across Manager and Delivery Rider roles,
+                        and implemented a role-based dashboard system using Django REST API
+                        with a Next.js frontend.</p>
+                    <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">[ VIEW GITHUB ]</a>
+                </div>
+            </div>
+
+            <div class="dead-space" style="height: 20vh;"></div>
+
+            <div class="project-card reverse" data-reveal-delay="80">
+                <div class="project-info">
+                    <h2 class="project-title">Ecentra-2k26</h2>
+                    <p class="mono-label">JAN 2026 – FEB 2026 | MOBILE-FIRST LANDING PAGE</p>
+                    <p class="project-desc">Developed a mobile-first landing page and engineered interactive modules
+                        for a symposium. Built with modern front-end technologies to deliver a seamless,
+                        responsive user experience across all devices.</p>
+                    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                        <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">[ VIEW GITHUB ]</a>
+                        <a href="https://ecentra2k26.in" class="view-link" target="_blank">[ 🌐 VIEW LIVE ]</a>
+                    </div>
+                </div>
+                <div class="project-image-wrap">
+                    <img src="Projects Images/Ecentra 2k26.jpg" alt="Ecentra 2k26 Project" class="project-img" />
+                </div>
+            </div>
+
+            <div class="dead-space" style="height: 20vh;"></div>
+
+            <div class="project-card" data-reveal-delay="160">
+                <div class="project-image-wrap">
+                    <img src="Projects Images/Eduretain.jpg" alt="Edu-Retain Project" class="project-img" />
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Edu-Retain</h2>
+                    <p class="mono-label">NOV 2025 – DEC 2025 | REACT &amp; EXPRESS</p>
+                    <p class="project-desc">Built a responsive UI using React Context API, Tailwind CSS 4, and
+                        Framer Motion with an Express server backend. Focused on creating smooth animations
+                        and a modern, component-driven architecture for an education platform.</p>
+                    <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">[ VIEW GITHUB ]</a>
+                </div>
+            </div>
+
+            <div class="dead-space" style="height: 20vh;"></div>
+
+            <div class="project-card reverse" data-reveal-delay="240">
+                <div class="project-info">
+                    <h2 class="project-title">Exclence – Smart Agriculture</h2>
+                    <p class="mono-label">MAR 2025 – APR 2025 | FLASK &amp; MACHINE LEARNING</p>
+                    <p class="project-desc">Developed a full-stack agriculture recommendation system using Flask
+                        and machine learning. The system analyzes soil and weather data to provide crop
+                        recommendations, helping farmers make data-driven decisions.</p>
+                    <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">[ VIEW GITHUB ]</a>
+                </div>
+                <div class="project-image-wrap">
+                    <img src="Projects Images/Exlence.jpg" alt="Exclence Project" class="project-img" />
+                </div>
+            </div>
+        </section>
+
+        <div class="dead-space" style="height: 30vh;"></div>
+
+        <div class="dead-space" style="height: 10vh;"></div>
+
+        <section class="section-divider" id="education">
+            <div class="line"></div>
+            <div class="section-label">FIG 4. ACADEMIC ARCHIVE &amp; SKILLSET</div>
+            <div class="line"></div>
+        </section>
+
+        <section class="projects" style="gap: 5rem;">
+            <div class="abstract-text" style="max-width: 100%;">
+                <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1rem;">Education Matrix</h3>
+                <ul style="list-style: none; font-family: var(--font-mono); font-size: 0.9rem; line-height: 2.2;">
+                    <li><strong>BTech CSE</strong>, Lovely Professional University (Aug 2023 - Present) | CGPA: 6.57</li>
+                    <li><strong>Intermediate (XII)</strong>, Sri Chaitanya Junior College (Mar 2021 - May 2023) | 89%</li>
+                    <li><strong>Matriculation (X)</strong>, AVNMCH (Varam) School (Mar 2020 - May 2021) | 90%</li>
+                </ul>
+            </div>
+
+            <!-- Infinite Scrolling Skills Marquee -->
+            <div class="skills-marquee-wrapper" style="max-width: 100%;">
+                <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Technical Skills</h3>
+                
+                <p class="mono-label" style="margin-bottom: 0.8rem; color: var(--data-red);">LANGUAGES</p>
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span class="marquee-item">C++</span>
+                        <span class="marquee-item">JavaScript</span>
+                        <span class="marquee-item">Python</span>
+                        <span class="marquee-item">HTML5</span>
+                        <span class="marquee-item">CSS3</span>
+                        <span class="marquee-item">SQL</span>
+                        <span class="marquee-item">PHP</span>
+                        <span class="marquee-item">C++</span>
+                        <span class="marquee-item">JavaScript</span>
+                        <span class="marquee-item">Python</span>
+                        <span class="marquee-item">HTML5</span>
+                        <span class="marquee-item">CSS3</span>
+                        <span class="marquee-item">SQL</span>
+                        <span class="marquee-item">PHP</span>
+                    </div>
+                </div>
+
+                <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">FRAMEWORKS & LIBRARIES</p>
+                <div class="marquee-track reverse">
+                    <div class="marquee-content">
+                        <span class="marquee-item">React JS</span>
+                        <span class="marquee-item">Next.js</span>
+                        <span class="marquee-item">Node.js</span>
+                        <span class="marquee-item">Express</span>
+                        <span class="marquee-item">Django</span>
+                        <span class="marquee-item">Flask</span>
+                        <span class="marquee-item">Tailwind CSS</span>
+                        <span class="marquee-item">Framer Motion</span>
+                        <span class="marquee-item">React JS</span>
+                        <span class="marquee-item">Next.js</span>
+                        <span class="marquee-item">Node.js</span>
+                        <span class="marquee-item">Express</span>
+                        <span class="marquee-item">Django</span>
+                        <span class="marquee-item">Flask</span>
+                        <span class="marquee-item">Tailwind CSS</span>
+                        <span class="marquee-item">Framer Motion</span>
+                    </div>
+                </div>
+
+                <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">TOOLS & PLATFORMS</p>
+                <div class="marquee-track">
+                    <div class="marquee-content">
+                        <span class="marquee-item">Git</span>
+                        <span class="marquee-item">GitHub</span>
+                        <span class="marquee-item">Postman</span>
+                        <span class="marquee-item">MySQL</span>
+                        <span class="marquee-item">MongoDB</span>
+                        <span class="marquee-item">VS Code</span>
+                        <span class="marquee-item">Vercel</span>
+                        <span class="marquee-item">REST API</span>
+                        <span class="marquee-item">Git</span>
+                        <span class="marquee-item">GitHub</span>
+                        <span class="marquee-item">Postman</span>
+                        <span class="marquee-item">MySQL</span>
+                        <span class="marquee-item">MongoDB</span>
+                        <span class="marquee-item">VS Code</span>
+                        <span class="marquee-item">Vercel</span>
+                        <span class="marquee-item">REST API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="abstract-text" style="max-width: 100%; border-left-color: var(--text-muted);">
+                <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1rem;">Certifications &amp; Training</h3>
+                
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-card-front">
+                                <img src="Certificate Images/Summer training.png" alt="Cipher Schools DSA Training" class="cert-img" />
+                                <button class="cert-btn" onclick="openLightbox('Certificate Images/Summer training.png')">[ VIEW CREDENTIAL ]</button>
+                            </div>
+                            <div class="cert-card-back">
+                                <h4>Cipher Schools – DSA Training</h4>
+                                <p>Mastering Data Structures and Algorithms at LPU. (Jun 2025 - Jul 2025)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-card-front">
+                                <img src="Certificate Images/Oracle.png" alt="Oracle Data Science" class="cert-img" />
+                                <button class="cert-btn" onclick="openLightbox('Certificate Images/Oracle.png')">[ VIEW CREDENTIAL ]</button>
+                            </div>
+                            <div class="cert-card-back">
+                                <h4>Oracle</h4>
+                                <p>Data Science Management System (Feb 2026)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-card-front">
+                                <img src="Certificate Images/Cisco.png" alt="Cisco Python Essentials 2" class="cert-img" />
+                                <button class="cert-btn" onclick="openLightbox('Certificate Images/Cisco.png')">[ VIEW CREDENTIAL ]</button>
+                            </div>
+                            <div class="cert-card-back">
+                                <h4>Cisco</h4>
+                                <p>Python Essentials 2 (Feb 2026)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cert-card">
+                        <div class="cert-card-inner">
+                            <div class="cert-card-front">
+                                <img src="Certificate Images/NPTEL.png" alt="Nptel Privacy and Security" class="cert-img" />
+                                <button class="cert-btn" onclick="openLightbox('Certificate Images/NPTEL.png')">[ VIEW CREDENTIAL ]</button>
+                            </div>
+                            <div class="cert-card-back">
+                                <h4>Nptel</h4>
+                                <p>Privacy and Security in Social Media (Oct 2025)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="dead-space" style="height: 30vh;"></div>
+
+        <section class="section-divider">
+            <div class="line"></div>
+            <div class="section-label">FIG 5. PING PROTOCOL</div>
+            <div class="line"></div>
+        </section>
+
+        <footer class="contact" id="contact">
+            <div class="contact-box">
+                <h2 class="dramatic-title">Initiate Transmission</h2>
+                <div class="mono-label" style="display:flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; font-size: 0.95rem;">
+                    <span>+91 8247446882</span>
+                    <span style="color: var(--data-red);">|</span>
+                    <a href="mailto:rn9092167@gmail.com" class="view-link">rn9092167@gmail.com</a>
+                    <span style="color: var(--data-red);">|</span>
+                    <a href="https://www.linkedin.com/in/rishi-narayan17/" class="view-link" target="_blank">LinkedIn</a>
+                    <span style="color: var(--data-red);">|</span>
+                    <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">GitHub</a>
+                </div>
+                <form class="data-form">
+                    <div class="form-group">
+                        <label for="name">ENTITY_NAME</label>
+                        <input type="text" id="name" required="" placeholder="John Doe" />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">PAYLOAD</label>
+                        <textarea id="message" rows="4" required="" placeholder="Enter transmission data..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">[ EXECUTE ]</button>
+                </form>
+            </div>
+        </footer>
+    </main>
+
+    <div class="dead-space" style="height: 20vh;"></div>
+
+    <!-- Achievements Side Panel -->
+    <div class="achievements-overlay" id="achievements-overlay" onclick="toggleAchievements(event)"></div>
+    <aside class="achievements-panel" id="achievements-panel">
+        <button class="achievements-close" onclick="toggleAchievements(event)" aria-label="Close">✕</button>
+        <h2 class="achievements-title">🏆 Achievements</h2>
+        <div class="achievements-list">
+            <div class="achievement-item">
+                <div class="achievement-icon">🥇</div>
+                <div class="achievement-content">
+                    <h3>Top 8 – Infernoverse Hackathon</h3>
+                    <p class="achievement-date">November 2025</p>
+                    <p>Secured Top 8 among 150 teams at the Infernoverse Hackathon, demonstrating strong problem-solving, teamwork, and rapid prototyping skills under pressure.</p>
+                </div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">🌐</div>
+                <div class="achievement-content">
+                    <h3>Ecentra2k26.in – Web Platform</h3>
+                    <p class="achievement-date">January – February 2026</p>
+                    <p>Designed and implemented ecentra2k26.in, attracting over 1500 users and enhancing event engagement through a responsive web platform.</p>
+                </div>
+            </div>
+        </div>
+        <div class="achievement-badges">
+            <span class="achievement-badge">🏆 Competitive Coder</span>
+            <span class="achievement-badge">⚡ Quick Learner</span>
+            <span class="achievement-badge">🚀 Full-Stack Dev</span>
+            <span class="achievement-badge">🧩 Open Source</span>
+        </div>
+    </aside>
+
+    <!-- Fullscreen Certificate Lightbox -->
+    <div id="cert-lightbox" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.92); cursor:pointer; justify-content:center; align-items:center;" onclick="closeLightbox()">
+        <button onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; background:none; border:none; color:#fff; font-size:2.5rem; cursor:pointer; font-family:var(--font-mono); z-index:10000;">✕</button>
+        <img id="cert-lightbox-img" src="" alt="Certificate" style="max-width:92vw; max-height:90vh; border-radius:8px; box-shadow: 0 0 60px rgba(200,60,60,0.3);" onclick="event.stopPropagation()" />
+    </div>
+
+    <script src="Rishiportfolio-orpin.vercel.app/script.js"></script>
+    <script>
+        // ═══ PRELOADER LOGIC ═══
+        (function() {
+            const percentEl = document.querySelector('.preloader-percent');
+            const barFill = document.querySelector('.preloader-bar-fill');
+            const preloader = document.getElementById('preloader');
+            let current = 0;
+            const target = 100;
+            const duration = 1800;
+            const startDelay = 1200;
+
+            // Force scroll to top during preloader
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+            
+            setTimeout(() => {
+                const startTime = performance.now();
+                
+                function updateCounter(now) {
+                    const elapsed = now - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    current = Math.floor(eased * target);
+                    
+                    if (percentEl) percentEl.textContent = current + '%';
+                    if (barFill) barFill.style.width = current + '%';
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        if (percentEl) percentEl.textContent = '100%';
+                        if (barFill) barFill.style.width = '100%';
+                        
+                        setTimeout(() => {
+                            preloader.classList.add('slide-up');
+                            document.body.classList.remove('loading');
+                            // Ensure we're at top after preloader
+                            window.scrollTo({ top: 0, behavior: 'instant' });
+                            
+                            setTimeout(() => {
+                                preloader.remove();
+                            }, 900);
+                        }, 400);
+                    }
+                }
+                
+                requestAnimationFrame(updateCounter);
+            }, startDelay);
+        })();
+    </script>
+    <script>
+        function openLightbox(src) {
+            const lb = document.getElementById('cert-lightbox');
+            const img = document.getElementById('cert-lightbox-img');
+            img.src = src;
+            lb.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            const lb = document.getElementById('cert-lightbox');
+            lb.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        // Achievements Panel Toggle
+        function toggleAchievements(e) {
+            if (e) e.preventDefault();
+            const panel = document.getElementById('achievements-panel');
+            const overlay = document.getElementById('achievements-overlay');
+            panel.classList.toggle('open');
+            overlay.classList.toggle('open');
+            if (panel.classList.contains('open')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+        // Mobile Nav Toggle
+        function toggleMobileNav() {
+            const overlay = document.getElementById('mobile-nav-overlay');
+            const btn = document.getElementById('hamburger-btn');
+            overlay.classList.toggle('open');
+            btn.classList.toggle('active');
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                const panel = document.getElementById('achievements-panel');
+                if (panel.classList.contains('open')) toggleAchievements();
+            }
+        });
+    </script>
+
+
+</body></html>
