@@ -475,7 +475,7 @@
 
         <footer class="contact" id="contact">
             <div class="contact-box">
-                <h2 class="dramatic-title">Initiate Transmission</h2>
+                <h2 class="dramatic-title">Contact Me</h2>
                 <div class="mono-label" style="display:flex; gap: 15px; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; font-size: 0.95rem;">
                     <span>+91 8247446882</span>
                     <span style="color: var(--data-red);">|</span>
@@ -485,14 +485,14 @@
                     <span style="color: var(--data-red);">|</span>
                     <a href="https://github.com/RishiNarayan1" class="view-link" target="_blank">GitHub</a>
                 </div>
-                <form class="data-form">
+                <form class="data-form" onsubmit="event.preventDefault(); window.location.href='mailto:rn9092167@gmail.com?subject=Portfolio Contact request from ' + encodeURIComponent(document.getElementById('name').value) + '&body=' + encodeURIComponent(document.getElementById('message').value); ">
                     <div class="form-group">
                         <label for="name">ENTITY_NAME</label>
                         <input type="text" id="name" required="" placeholder="John Doe" />
                     </div>
                     <div class="form-group">
                         <label for="message">PAYLOAD</label>
-                        <textarea id="message" rows="4" required="" placeholder="Enter transmission data..."></extarea>
+                        <textarea id="message" rows="4" required="" placeholder="Enter transmission data..."></textarea>
                     </div>
                     <button type="submit" class="submit-btn">[ EXECUTE ]</button>
                 </form>
