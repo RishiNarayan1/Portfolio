@@ -38,10 +38,10 @@
         <div class="nav-brand">RISHI NARAYAN</div>
         <div class="nav-links">
             <a href="#about">01. OBSERVATION</a>
-            <a href="#projects">02. ANALYSIS</a>
+            <a href="#projects">02. PROJECTS</a>
             <a href="#education">03. ARCHIVE</a>
-            <a href="#contact">04. CONCLUSION</a>
-            <a href="#" id="achievements-nav-link" onclick="toggleAchievements(event)">🏆 ACHIEVEMENTS</a>
+            <a href="#achievements">04. ACHIEVEMENTS</a>
+            <a href="#contact">05. CONTACT</a>
         </div>
         <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Menu">
             <span></span><span></span><span></span>
@@ -51,10 +51,10 @@
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="toggleMobileNav()">
         <div class="mobile-nav-menu">
             <a href="#about" onclick="toggleMobileNav()">01. OBSERVATION</a>
-            <a href="#projects" onclick="toggleMobileNav()">02. ANALYSIS</a>
+            <a href="#projects" onclick="toggleMobileNav()">02. PROJECTS</a>
             <a href="#education" onclick="toggleMobileNav()">03. ARCHIVE</a>
-            <a href="#contact" onclick="toggleMobileNav()">04. CONCLUSION</a>
-            <a href="#" onclick="toggleAchievements(event); toggleMobileNav()">🏆 ACHIEVEMENTS</a>
+            <a href="#achievements" onclick="toggleMobileNav()">04. ACHIEVEMENTS</a>
+            <a href="#contact" onclick="toggleMobileNav()">05. CONTACT</a>
         </div>
     </div>
 
@@ -113,6 +113,81 @@
         </section>
         <h2 class="dramatic-title" style="text-align: center; margin-bottom: 0;">How I fell in love with Fullstack
             Development.</h2>
+    </main>
+
+    <div class="dead-space" style="height: 5vh;"></div>
+
+    <!-- Technical Skills Marquee (moved here before basketball) -->
+    <main class="document">
+        <div class="skills-marquee-wrapper" style="max-width: 100%;">
+            <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Technical Skills</h3>
+
+            <p class="mono-label" style="margin-bottom: 0.8rem; color: var(--data-red);">LANGUAGES</p>
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span class="marquee-item">C++</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">HTML5</span>
+                    <span class="marquee-item">CSS3</span>
+                    <span class="marquee-item">SQL</span>
+                    <span class="marquee-item">PHP</span>
+                    <span class="marquee-item">C++</span>
+                    <span class="marquee-item">JavaScript</span>
+                    <span class="marquee-item">Python</span>
+                    <span class="marquee-item">HTML5</span>
+                    <span class="marquee-item">CSS3</span>
+                    <span class="marquee-item">SQL</span>
+                    <span class="marquee-item">PHP</span>
+                </div>
+            </div>
+
+            <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">
+                FRAMEWORKS & LIBRARIES</p>
+            <div class="marquee-track reverse">
+                <div class="marquee-content">
+                    <span class="marquee-item">React JS</span>
+                    <span class="marquee-item">Next.js</span>
+                    <span class="marquee-item">Node.js</span>
+                    <span class="marquee-item">Express</span>
+                    <span class="marquee-item">Django</span>
+                    <span class="marquee-item">Flask</span>
+                    <span class="marquee-item">Tailwind CSS</span>
+                    <span class="marquee-item">Framer Motion</span>
+                    <span class="marquee-item">React JS</span>
+                    <span class="marquee-item">Next.js</span>
+                    <span class="marquee-item">Node.js</span>
+                    <span class="marquee-item">Express</span>
+                    <span class="marquee-item">Django</span>
+                    <span class="marquee-item">Flask</span>
+                    <span class="marquee-item">Tailwind CSS</span>
+                    <span class="marquee-item">Framer Motion</span>
+                </div>
+            </div>
+
+            <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">TOOLS &
+                PLATFORMS</p>
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">GitHub</span>
+                    <span class="marquee-item">Postman</span>
+                    <span class="marquee-item">MySQL</span>
+                    <span class="marquee-item">MongoDB</span>
+                    <span class="marquee-item">VS Code</span>
+                    <span class="marquee-item">Vercel</span>
+                    <span class="marquee-item">REST API</span>
+                    <span class="marquee-item">Git</span>
+                    <span class="marquee-item">GitHub</span>
+                    <span class="marquee-item">Postman</span>
+                    <span class="marquee-item">MySQL</span>
+                    <span class="marquee-item">MongoDB</span>
+                    <span class="marquee-item">VS Code</span>
+                    <span class="marquee-item">Vercel</span>
+                    <span class="marquee-item">REST API</span>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div class="dead-space" style="height: 10vh;"></div>
@@ -345,7 +420,7 @@
             <div class="line"></div>
         </section>
 
-        <section class="projects" style="gap: 5rem;">
+        <section class="projects" style="gap: 2rem;">
             <div class="abstract-text" style="max-width: 100%;">
                 <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1rem;">Education Matrix</h3>
                 <ul style="list-style: none; font-family: var(--font-mono); font-size: 0.9rem; line-height: 2.2;">
@@ -357,76 +432,45 @@
                 </ul>
             </div>
 
-            <!-- Infinite Scrolling Skills Marquee -->
-            <div class="skills-marquee-wrapper" style="max-width: 100%;">
-                <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Technical Skills</h3>
+        <div class="dead-space" style="height: 5vh;"></div>
 
-                <p class="mono-label" style="margin-bottom: 0.8rem; color: var(--data-red);">LANGUAGES</p>
-                <div class="marquee-track">
-                    <div class="marquee-content">
-                        <span class="marquee-item">C++</span>
-                        <span class="marquee-item">JavaScript</span>
-                        <span class="marquee-item">Python</span>
-                        <span class="marquee-item">HTML5</span>
-                        <span class="marquee-item">CSS3</span>
-                        <span class="marquee-item">SQL</span>
-                        <span class="marquee-item">PHP</span>
-                        <span class="marquee-item">C++</span>
-                        <span class="marquee-item">JavaScript</span>
-                        <span class="marquee-item">Python</span>
-                        <span class="marquee-item">HTML5</span>
-                        <span class="marquee-item">CSS3</span>
-                        <span class="marquee-item">SQL</span>
-                        <span class="marquee-item">PHP</span>
+        <section class="section-divider" id="achievements">
+            <div class="line"></div>
+            <div class="section-label">FIG 5. ACHIEVEMENTS</div>
+            <div class="line"></div>
+        </section>
+
+        <section class="projects" style="gap: 3rem;">
+            <div class="abstract-text" style="max-width: 100%;">
+                <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1.5rem;">🏆 Achievements</h3>
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="font-size: 2rem; min-width: 40px;">🥇</div>
+                        <div>
+                            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.3rem;">Top 8 – Infernoverse Hackathon</h4>
+                            <p class="mono-label" style="color: var(--data-red); margin-bottom: 0.5rem;">NOVEMBER 2025</p>
+                            <p style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Secured Top 8 among 150 teams at the Infernoverse Hackathon, demonstrating strong problem-solving, teamwork, and rapid prototyping skills under pressure.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; align-items: flex-start;">
+                        <div style="font-size: 2rem; min-width: 40px;">🌐</div>
+                        <div>
+                            <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.3rem;">Ecentra2k26.in – Web Platform</h4>
+                            <p class="mono-label" style="color: var(--data-red); margin-bottom: 0.5rem;">JANUARY – FEBRUARY 2026</p>
+                            <p style="font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; color: var(--text-muted);">Designed and implemented ecentra2k26.in, attracting over 1500 users and enhancing event engagement through a responsive web platform.</p>
+                        </div>
                     </div>
                 </div>
-
-                <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">
-                    FRAMEWORKS & LIBRARIES</p>
-                <div class="marquee-track reverse">
-                    <div class="marquee-content">
-                        <span class="marquee-item">React JS</span>
-                        <span class="marquee-item">Next.js</span>
-                        <span class="marquee-item">Node.js</span>
-                        <span class="marquee-item">Express</span>
-                        <span class="marquee-item">Django</span>
-                        <span class="marquee-item">Flask</span>
-                        <span class="marquee-item">Tailwind CSS</span>
-                        <span class="marquee-item">Framer Motion</span>
-                        <span class="marquee-item">React JS</span>
-                        <span class="marquee-item">Next.js</span>
-                        <span class="marquee-item">Node.js</span>
-                        <span class="marquee-item">Express</span>
-                        <span class="marquee-item">Django</span>
-                        <span class="marquee-item">Flask</span>
-                        <span class="marquee-item">Tailwind CSS</span>
-                        <span class="marquee-item">Framer Motion</span>
-                    </div>
-                </div>
-
-                <p class="mono-label" style="margin-top: 2rem; margin-bottom: 0.8rem; color: var(--data-red);">TOOLS &
-                    PLATFORMS</p>
-                <div class="marquee-track">
-                    <div class="marquee-content">
-                        <span class="marquee-item">Git</span>
-                        <span class="marquee-item">GitHub</span>
-                        <span class="marquee-item">Postman</span>
-                        <span class="marquee-item">MySQL</span>
-                        <span class="marquee-item">MongoDB</span>
-                        <span class="marquee-item">VS Code</span>
-                        <span class="marquee-item">Vercel</span>
-                        <span class="marquee-item">REST API</span>
-                        <span class="marquee-item">Git</span>
-                        <span class="marquee-item">GitHub</span>
-                        <span class="marquee-item">Postman</span>
-                        <span class="marquee-item">MySQL</span>
-                        <span class="marquee-item">MongoDB</span>
-                        <span class="marquee-item">VS Code</span>
-                        <span class="marquee-item">Vercel</span>
-                        <span class="marquee-item">REST API</span>
-                    </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem;">
+                    <span class="mono-label" style="border: 1px solid var(--data-red); padding: 0.4rem 1rem; border-radius: 4px;">🏆 Competitive Coder</span>
+                    <span class="mono-label" style="border: 1px solid var(--data-red); padding: 0.4rem 1rem; border-radius: 4px;">⚡ Quick Learner</span>
+                    <span class="mono-label" style="border: 1px solid var(--data-red); padding: 0.4rem 1rem; border-radius: 4px;">🚀 Full-Stack Dev</span>
+                    <span class="mono-label" style="border: 1px solid var(--data-red); padding: 0.4rem 1rem; border-radius: 4px;">🧩 Open Source</span>
                 </div>
             </div>
+        </section>
+
+        <section class="projects" style="gap: 2rem;">
 
             <div class="abstract-text" style="max-width: 100%; border-left-color: var(--text-muted);">
                 <h3 class="dramatic-title" style="font-size: 2rem; margin-bottom: 1rem;">Certifications &amp; Training
@@ -495,12 +539,13 @@
                 </div>
             </div>
         </section>
+        </section>
 
         <div class="dead-space" style="height: 30vh;"></div>
 
         <section class="section-divider">
             <div class="line"></div>
-            <div class="section-label">FIG 5. PING PROTOCOL</div>
+            <div class="section-label">FIG 6. PING PROTOCOL</div>
             <div class="line"></div>
         </section>
 
@@ -537,38 +582,7 @@
 
     <div class="dead-space" style="height: 20vh;"></div>
 
-    <!-- Achievements Side Panel -->
-    <div class="achievements-overlay" id="achievements-overlay" onclick="toggleAchievements(event)"></div>
-    <aside class="achievements-panel" id="achievements-panel">
-        <button class="achievements-close" onclick="toggleAchievements(event)" aria-label="Close">✕</button>
-        <h2 class="achievements-title">🏆 Achievements</h2>
-        <div class="achievements-list">
-            <div class="achievement-item">
-                <div class="achievement-icon">🥇</div>
-                <div class="achievement-content">
-                    <h3>Top 8 – Infernoverse Hackathon</h3>
-                    <p class="achievement-date">November 2025</p>
-                    <p>Secured Top 8 among 150 teams at the Infernoverse Hackathon, demonstrating strong
-                        problem-solving, teamwork, and rapid prototyping skills under pressure.</p>
-                </div>
-            </div>
-            <div class="achievement-item">
-                <div class="achievement-icon">🌐</div>
-                <div class="achievement-content">
-                    <h3>Ecentra2k26.in – Web Platform</h3>
-                    <p class="achievement-date">January – February 2026</p>
-                    <p>Designed and implemented ecentra2k26.in, attracting over 1500 users and enhancing event
-                        engagement through a responsive web platform.</p>
-                </div>
-            </div>
-        </div>
-        <div class="achievement-badges">
-            <span class="achievement-badge">🏆 Competitive Coder</span>
-            <span class="achievement-badge">⚡ Quick Learner</span>
-            <span class="achievement-badge">🚀 Full-Stack Dev</span>
-            <span class="achievement-badge">🧩 Open Source</span>
-        </div>
-    </aside>
+
 
     <!-- Fullscreen Certificate Lightbox -->
     <div id="cert-lightbox"
